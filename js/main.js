@@ -73,7 +73,7 @@ function selection() {
 
                     case "3":
                         nights = parseInt(prompt("Ingrese la cant de noches que desea alojarse"));
-                        let confirmation3 = prompt(`Le recomendamos:\n ${tripleRoom.info}\n ¿Desea reservar esta habitación?\n1.SI\n2.No`);
+                        let confirmation3 = prompt(`Le recomendamos:\n ${tripleRoom.info}\n ¿Desea reservar esta habitación?\n1.Si\n2.No`);
                         if (confirmation3 === "1") {
                             finalPrice = tripleRoom.price * nights;
                             alert(`Has reservado la Habitación Triple por ${nights} noches,\n Su precio final es de $${finalPrice}`);
@@ -86,7 +86,7 @@ function selection() {
 
                     case "4":
                         nights = parseInt(prompt("Ingrese la cant de noches que desea alojarse"));
-                        let confirmation4 = prompt(`Le recomendamos:\n ${quadRoom.info}\n ¿Desea reservar esta habitación?\n1.SI\n2.No`)
+                        let confirmation4 = prompt(`Le recomendamos:\n ${quadRoom.info}\n ¿Desea reservar esta habitación?\n1.Si\n2.No`)
                         if (confirmation4 === "1") {
                             finalPrice = quadRoom.price * nights;
                             alert(`Has reservado la Habitación Cuádruple por ${nights} noches,\n Su precio final es de $${finalPrice}`);
@@ -112,7 +112,7 @@ function selection() {
                 break;
 
             default:
-                alert("No has elegido una opción válida.")
+                alert("No has elegido una opción válida.");
                 options = showMenu();
                 break;
         }
@@ -121,7 +121,7 @@ function selection() {
     if (options === "ESC") {
         alert("Gracias por utilizar nuestro sistema de reservas de Estancia Los Galeses. ");
     } else {
-        alert("No has elegido un valor permitido en el menú. Serás redirigido.")
+        alert("No has elegido un valor permitido en el menú. Serás redirigido.");
         options = showMenu();
         selection();
     }
