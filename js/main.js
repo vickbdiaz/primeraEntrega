@@ -10,7 +10,7 @@ class Room {
     constructor(roomType, price) {
         this.roomType = roomType;
         this.price = price;
-        this.info = `La habitación ${this.roomType}, tiene un precio de $${this.price} por noche.`
+        this.info = `La habitación ${this.roomType}, tiene un precio de $${this.price} por noche.`;
     }
 }
 
@@ -28,7 +28,8 @@ function showMenu(menu) { // funcion que muestra el menú
     Elija la operación que desea realizar.
     1. Realizar una reserva.
     2. Ver tarifario de habitaciones.
-    (ESC) para salir.`)
+    3. Ver historial de reserva
+    (ESC) para salir.`);
     return options;
 }
 
@@ -72,7 +73,7 @@ function selection() {
                         break;
 
                     case "3":
-                        nights = parseInt(prompt("Ingrese la cant de noches que desea alojarse"));
+                        nights = parseInt(prompt("Ingrese la cantidad de noches que desea alojarse"));
                         let confirmation3 = prompt(`Le recomendamos:\n ${tripleRoom.info}\n ¿Desea reservar esta habitación?\n1.Si\n2.No`);
                         if (confirmation3 === "1") {
                             finalPrice = tripleRoom.price * nights;
@@ -85,7 +86,7 @@ function selection() {
                         break;
 
                     case "4":
-                        nights = parseInt(prompt("Ingrese la cant de noches que desea alojarse"));
+                        nights = parseInt(prompt("Ingrese la cantidad de noches que desea alojarse"));
                         let confirmation4 = prompt(`Le recomendamos:\n ${quadRoom.info}\n ¿Desea reservar esta habitación?\n1.Si\n2.No`)
                         if (confirmation4 === "1") {
                             finalPrice = quadRoom.price * nights;
